@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://preline.co/assets/js/hs-apexcharts-helpers.js"></script>
+    <title>dashboard</title>
+    <style>
+        .search-box {
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MENU -->
+    <div class="flex h-screen bg-white">
+        <!-- SIDEBAR -->
+        <div class="flex flex-col w-1/5 border-r border-gray-200">
+            <div class="px-4 py-6">
+                <span class="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
+                    Logo
+                </span>
+                
+                <ul class="mt-6 space-y-1">
+                    <li>
+                        <a href="#" class="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
+                            Dashboard
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <details class="group [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="text-sm font-medium"> Transaksi </span>
+                                
+                                <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            
+                            <ul class="mt-2 space-y-1 px-4">
+                                <li>
+                                    <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                        Riwayat Pembelian
+                                    </a>
+                                </li>
+                                <!-- riwayat pembelian-->
+                               
+                                <li>
+                                    <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                        Kwitansi
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            Laporan Pendapatan
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <details class="group [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="text-sm font-medium"> Account </span>
+                                
+                                <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            
+                            <ul class="mt-2 space-y-1 px-4">
+                                <li>
+                                    <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                        Details
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                        Security
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <form action="#">
+                                        <button type="submit" class="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- END SIDEBAR -->
+
+        <!-- Search Box di samping Logo -->
+        <div class="search-box flex items-center ml-auto mr-auto">
+            <label for="search" class="sr-only">Search</label>
+            <input type="text" id="search" placeholder="Search for..." class="w-full rounded-md border-gray-200 py-2.5 pr-10 shadow-sm sm:text-sm ml-2">
+            <button type="button" class="absolute inset-y-0 right-0 flex items-center justify-center w-10 text-gray-600 hover:text-gray-700">
+                <span class="sr-only">Search</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                </svg>
+            </button>
+        </div>
+        <!-- End Search Box -->
+
+        <section class="bg-white">
+            <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+              <div class="mx-auto max-w-3xl text-center">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Dashboard</h2>
+          
+                <p class="mt-4 text-gray-500 sm:text-xl">
+                  Raimu Koyo Anak Kotes
+                </p>
+              </div>
+          
+              <div class="mt-8 sm:mt-12">
+                <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                  <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
+                    <dt class="order-last text-lg font-medium text-gray-500">Total Sales</dt>
+          
+                    <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">$4.8m</dd>
+                  </div>
+          
+                  <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
+                    <dt class="order-last text-lg font-medium text-gray-500">Official Addons</dt>
+          
+                    <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">24</dd>
+                  </div>
+          
+                  <div class="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center">
+                    <dt class="order-last text-lg font-medium text-gray-500">Total Addons</dt>
+          
+                    <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">86</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </section>
+
+        <!-- Admin Button -->
+        <button class="absolute top-0 right-0 mt-4 mr-4 bg-indigo-600 px-5 py-3 text-sm font-medium text-white rounded-lg transition hover:bg-indigo-700 focus:outline-none focus:ring" type="button">
+            Admin
+        </button>
+        <!-- End Admin Button -->
+
+        
+
+        <!-- Bagian Eric Frusciante -->
+        <div class="flex justify-between w-full px-4 bottom-0 fixed border-t border-gray-200 bg-white">
+            <a href="#" class="flex items-center gap-2 p-4 hover:bg-gray-50">
+                <img
+                    alt=""
+                    src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    class="size-10 rounded-full object-cover"
+                />
+                <div>
+                    <p class="text-xs">
+                        <strong class="block font-medium">Eric Frusciante</strong>
+                        <span> eric@frusciante.com </span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <!-- END Bagian Eric Frusciante -->
+    </div>
+    <!-- END MENU -->
+
+    <div id="hs-multiple-bar-charts"></div>
+</body>
+</html>
